@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Your Website Title{% endblock %}</title>
+    <!-- Include Tailwind CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!-- Add your custom CSS or additional CSS links here -->
+  </head>
+  <body class="bg-gray-100">
+    <header class="bg-blue-500 p-4">
+      <nav class="container mx-auto flex items-center justify-between">
+        <a href="/" class="text-white text-2xl font-semibold">Your Logo</a>
+        <ul class="flex space-x-4">
+          <li><a href="/" class="text-white">Home</a></li>
+          <li><a href="/about/" class="text-white">About</a></li>
+          <li><a href="/contact/" class="text-white">Contact</a></li>
+          <!-- Add more navigation links as needed -->
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container mx-auto mt-4">
+      {% block content %}{% endblock %}
+    </main>
+
+    <footer class="bg-gray-300 p-4 mt-8">
+      <div class="container mx-auto text-center">
+        <!-- Add your footer content here -->
+        &copy; {{ year }} Your Website Name
+      </div>
+    </footer>
+
+    <!-- Include your custom JavaScript scripts and other scripts here -->
+  </body>
+</html>
